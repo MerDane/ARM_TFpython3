@@ -27,9 +27,7 @@ RUN apt-get install -y libncurses5-dev
 RUN pip3 install --upgrade pip
 RUN pip3 install readline jupyter
 
-RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
-    libglib2.0-0 libxext6 libsm6 libxrender1 \
-    git mercurial subversion
+RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates libglib2.0-0 libxext6 libsm6 libxrender1 git mercurial subversion
 
 RUN wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/raw/master/bin/tensorflow-0.10.0-py3-none-any.whl
 RUN pip3 install tensorflow-0.10.0-py3-none-any.whl
