@@ -9,7 +9,7 @@ WORKDIR /root
 
 # Install packages necessary for compiling python
 RUN apt-get update;\
-    apt-get -y upgrade;
+    apt-get -y upgrade
     
 RUN apt-get install -y build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl
 
