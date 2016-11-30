@@ -5,6 +5,9 @@ MAINTAINER Merdan <@merdan>
 ENV DEBIAN_FRONTEND noninteractive
 ENV PHTHON_VERSION 3.5.2
 
+
+RUN	apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys E871F18B51E0147C77796AC81196BA81F6B0FC61
+RUN	echo deb http://ppa.launchpad.net/zfs-native/stable/ubuntu utopic main > /etc/apt/sources.list.d/zfs.list
 # Install packages necessary for compiling python
 RUN apt-get update --fix-missing
 RUN apt-get -y upgrade
