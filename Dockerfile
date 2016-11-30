@@ -1,7 +1,7 @@
 FROM armv7/armhf-ubuntu:14.04
 MAINTAINER Merdan <@merdan>
 
-RUN bash
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 # Set the variables
 ENV DEBIAN_FRONTEND noninteractive
 ENV PHTHON_VERSION 3.5.2
